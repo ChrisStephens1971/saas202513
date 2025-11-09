@@ -18,13 +18,14 @@ set -e
 
 echo "🔍 Running pre-commit validation..."
 
-# Check for unreplaced placeholders (exclude .githooks/ directory)
+# Check for unreplaced placeholders (exclude .githooks/ directory and GitHub Actions syntax)
 echo "  Checking for unreplaced placeholders..."
 STAGED_FILES=$(git diff --cached --name-only | grep -v "^\.githooks/" || true)
 if [ -n "$STAGED_FILES" ]; then
-    if echo "$STAGED_FILES" | xargs grep -l "{{" 2>/dev/null; then
+    # Look for {{ but exclude ${{ (GitHub Actions syntax)
+    if echo "$STAGED_FILES" | xargs grep -l "[^$]{{" 2>/dev/null; then
         echo "❌ ERROR: Found unreplaced placeholders in staged files:"
-        echo "$STAGED_FILES" | xargs grep -n "{{"
+        echo "$STAGED_FILES" | xargs grep -n "[^$]{{"
         echo ""
         echo "Please replace all {{PLACEHOLDER}} values before committing."
         exit 1

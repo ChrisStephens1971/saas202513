@@ -1,6 +1,6 @@
 # Integration Guide
 
-**Project:** {{PROJECT_NAME}}
+**Project:** saas202513
 **Template Version:** 2.0
 
 This document covers optional external tool integrations for your SaaS project.
@@ -14,6 +14,30 @@ This document covers optional external tool integrations for your SaaS project.
 When you're ready to code, consider **Claude Code Templates** for technical implementation.
 
 Everything else is optional and situational.
+
+---
+
+## ⚠️ IMPORTANT: Built-in vs. Installable
+
+**Claude Code has powerful built-in capabilities that require ZERO installation:**
+
+### ✅ Always Available (No Installation)
+- **File operations** - Read, Write, Edit, Glob, Grep
+- **Task tool with Explore/Plan agents** - Fast codebase exploration and planning
+- **Web research** - WebSearch, WebFetch
+- **Task management** - TodoWrite, AskUserQuestion
+
+**⚠️ CRITICAL:** Task tool's Explore and Plan agents are **BUILT-IN**. They do NOT need installation!
+
+### 📦 Require Installation (Optional)
+- **Claude Code Templates** - 163 development agents (install when coding)
+- **Claude Skills** - Document processing (install when needed)
+- **WSHobson Agents** - Framework specialists (install when needed)
+- **MCP Servers** - External integrations (install when needed)
+
+**See:** `BUILT-IN-VS-INSTALLABLE.md` for complete breakdown
+
+**When to install?** Only during development phase, NOT for planning!
 
 ---
 
@@ -179,5 +203,5 @@ Just ask Claude:
 
 ---
 
-**Last Updated:** {{CREATION_DATE}}
+**Last Updated:** 2025-11-02
 **Template Version:** 2.0
