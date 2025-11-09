@@ -4,14 +4,15 @@
   "templateType": "azure",
   "version": "2.1",
   "state": {
-    "hasGreeted": false,
+    "hasGreeted": true,
     "setupComplete": false,
     "currentSprint": null,
-    "phase": "planning"
+    "phase": "planning-complete"
   },
   "metadata": {
-    "tradeName": null,
-    "teamType": null,
+    "tradeName": "RouteRev",
+    "tagline": "Optimize your route. Accelerate your revenue.",
+    "teamType": "solo-founder",
     "multiTenant": true,
     "tenantModel": "subdomain"
   },
